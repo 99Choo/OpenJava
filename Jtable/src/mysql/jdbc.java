@@ -12,6 +12,11 @@ public class jdbc extends JFrame{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	// 사용자가 창을 닫을때 프로그램이 종료.
 		setLayout(new BorderLayout()); // 창 안의 컴포넌트 배치를 관리 하는 방식 정의.
 									   // 상,하,좌,우,중앙 다섯 영억으로 구성되어 각 영역 컴포넌트 배치.
+		// 데이터베이스 연결 정보 설정
+		String url ="Jdbc:mysql://localhost3306/project"l // 데이터베이스 URL
+		String user= "root"; // MySQL 사용자 이름
+		String password = "1234"; //MySQL 비밀번호
+	
 	}
 	
 
