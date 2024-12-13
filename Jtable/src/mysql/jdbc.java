@@ -49,8 +49,9 @@ public class jdbc extends JFrame{
         		String startDate = rs.getDate("StartDate") != null ? rs.getDate("StartDate").toString() : null; // 시작일
         		String EndDate = rs.getDate("EndDate") != null ? rs.getDate("EndDate").toString() : null; // 시작일
         		String state = rs.getString("state"); // 상태
-        		
-        	}
+        		// 모델에 데이터 추가
+                model.addRow(new Object[]{PjName, startDate, EndDate, state});
+            }
         
         }
 	}
