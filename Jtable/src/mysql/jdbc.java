@@ -16,6 +16,11 @@ public class jdbc extends JFrame{
 		String url ="Jdbc:mysql://localhost3306/project"l // 데이터베이스 URL
 		String user= "root"; // MySQL 사용자 이름
 		String password = "1234"; //MySQL 비밀번호
+		
+        Connection conn = null; // 데이터베이스 연결을 위한 Connection 객체
+        Statement stmt = null; // SQL 문을 실행하기 위한 Statement 객체
+        ResultSet rs = null; // SQL 쿼리 결과를 저장하기 위한 ResultSet 객체
+        
 	
 	}
 	
