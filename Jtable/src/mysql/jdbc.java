@@ -3,6 +3,7 @@ import javax.swing.*; //GUI 관련 클래스와 컴포넌트 제공
 import javax.swing.table.DefaultTableModel; // 테이블의 데이터를 관리
 import java.awt.*; //GUI 만들기 위한 도구와 클래스들을 제공. 창,버튼,텍스트 필드,레이아웃 매니저 등
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.Statement;
 
 // public class jdbc : jdbc 라는 공개 클래스를 선언. 다른 클래스에서도 접근 가능.
@@ -43,8 +44,14 @@ public class jdbc extends JFrame{
         	//초기 행의 개수를 0으로 설정. 즉, 처음에는 데이터가 없는 테이블로 시작.
         	DefaultTableModel model = new DefaultTableModel(new String[] {"Pjname", "StartDate","EndDate",
         			"State"},0);
-        	
+        	while (rs.next()) {
+        		String PjName = rs.getString("PjName"); // 프로젝트 이름
+        		String startDate = rs.getDate("StartDate") != null ? rs.getDate("StartDate").toString() : null; // 시작일
+        		String EndDate = rs.getDate("EndDate") != null ? rs.getDate("EndDate").toString() : null; // 시작일
+        		String state = rs.getString("state"); // 상태
+        		
         	}
+        
         }
 	}
 	
